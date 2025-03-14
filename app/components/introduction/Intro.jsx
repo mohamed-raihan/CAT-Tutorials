@@ -17,13 +17,13 @@ function Intro() {
   const handleSubmit = () => {};
 
   return (
-    <div className="grid grid-cols-2 mt-10 gap-3">
-      <div className="col-span-1 px-20 flex flex-col items-center justify-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 mt-10 gap-3">
+      <div className="col-span-1 px-10 md:px-20 flex flex-col items-center justify-center">
         <div>
-          <h6 className="text-4xl font-bold mt-4 text-[#FF6B3D]">
-            Your Mentor <p>And Guide</p> For Brighter Future
+          <h6 className="text-4xl font-bold mt-4 text-white">
+            Your Mentor <p>And Guide</p> <span className="text-[#FF6B3D]">For Brighter Future</span>
           </h6>
-          <p className="mt-5 font-sans">
+          <p className="mt-5 font-sans text-justify">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum
             impedit maiores nobis veniam quaerat molestiae sed possimus labore,
             voluptates perspiciatis ad quia odit minima ipsam consectetur facere
@@ -31,9 +31,9 @@ function Intro() {
           </p>
         </div>
       </div>
-      <div className="col-span-1 flex flex-col justify-center items-center ">
-        <div className="bg-[#0E1721] lg:w-[75%]  p-8 rounded-lg border border-[#1A2836] shadow-lg">
-          <div>
+      <div className="col-span-1 flex flex-col ps-3 pe-1 md:p-0 justify-center items-center ">
+        <div className="bg- lg:w-[75%]  p-8 rounded-lg border border-[#1A2836] shadow-lg">
+          <div>[#0E1721]
             <h3 className="text-[#FF6B3D] text-xl font-semibold mb-3">
               NEED ASSISTANCE?
             </h3>

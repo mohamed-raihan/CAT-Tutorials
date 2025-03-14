@@ -19,8 +19,8 @@ const Benefits = () => {
   ];
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4 md:px-8">
+    <section className="py-10">
+      <div className="px-4 md:px-8">
         {/* Heading */}
         <div className="mb-8">
           <h2 className="text-3xl md:text-4xl text-left text-white">
@@ -39,7 +39,7 @@ const Benefits = () => {
               {/* Video Thumbnail */}
               <div className="w-full h-64">
                 <iframe
-                  className="w-full h-full"
+                  className="w-full rounded-2xl h-full"
                   src={video.url}
                   title={video.title}
                   frameBorder="0"

@@ -39,12 +39,12 @@ const courses = [
 const ExploreCourses = () => {
   return (
     <section className="px-6 py-12">
-      <h2 className="text-3xl mb-6">Explore our Courses</h2>
+      <h2 className="text-3xl mb-6">Explore our <span className="text-[#F55D3E]">Courses</span></h2>
       <div className="mb-6 flex gap-3">
-        <button className="px-2 py-2 border rounded-full bg-[#F55D3E]">All Courses</button>
-        <button className="px-4 py-2 border rounded-full bg-[#F55D3E] text-white">Online Courses</button>
-        <button className="px-4 py-2 border rounded-full bg-[#F55D3E]">Pre-Recorded Courses</button>
-        <button className="px-4 py-2 border rounded-full bg-[#F55D3E]">Miscellaneous Courses</button>
+        <button className="px-2 text-xs h-9 rounded-full bg-[#F55D3E]">All Courses</button>
+        <button className="px-4 py-2 text-xs h-9 rounded-full bg-[#F55D3E] text-white">Online Courses</button>
+        <button className="px-4 py-2 text-xs h-9 rounded-full bg-[#F55D3E]">Pre-Recorded Courses</button>
+        <button className="px-4 py-2 text-xs h-9 rounded-full bg-[#F55D3E]">Miscellaneous Courses</button>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {courses.map((course, index) => (
