@@ -33,7 +33,7 @@ function Intro() {
       </div>
       <div className="col-span-1 flex flex-col ps-3 pe-1 md:p-0 justify-center items-center ">
         <div className="bg- lg:w-[75%]  p-8 rounded-lg border border-[#1A2836] shadow-lg">
-          <div>[#0E1721]
+          <div>
             <h3 className="text-[#FF6B3D] text-xl font-semibold mb-3">
               NEED ASSISTANCE?
             </h3>
