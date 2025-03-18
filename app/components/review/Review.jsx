@@ -40,26 +40,39 @@ function Review() {
       date: "2023-06-01",
     },
   ];
+
   return (
-    <div className="ps-6">
+    <div className="px-4 md:px-8 lg:px-12 py-6">
+      {/* Title */}
       <div>
-        <h4 className="text-3xl">Reviews & <span className="text-[#F55D3E]">Feedbacks</span></h4>
+        <h4 className="text-2xl md:text-3xl font-semibold">
+          Reviews & <span className="text-[#F55D3E]">Feedbacks</span>
+        </h4>
       </div>
-      <div className="grid grid-cols-3 gap-3 mt-3">
-        {reviewData.map((data) => (
-          <div className="shadow col-span-1 rounded-2xl p-5 bg-[#1f1414]">
-            <img
-              src={data.image}
-              className="rounded-full w-20"
-              alt=""
-            />
-            <h5 className="my-2">{data.name}</h5>
-            <button className="border font-sans rounded-full p-1.5 text-xs">
-              {data.button}
-            </button>
-            <div className="my-2">⭐⭐⭐⭐⭐</div>
-            <p className="font-sans">{data.review}</p>
-            <p className="mb-2 font-sans text-xs">{data.date}</p>
+
+      {/* Review Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+        {reviewData.map((data, index) => (
+          <div key={index} className="shadow-lg rounded-2xl p-6 bg-[#1f1414] text-white">
+            {/* Profile Image */}
+            <div className="flex items-center gap-4">
+              <img src={data.image} className="rounded-full w-16 h-16 object-cover" alt={data.name} />
+              <div>
+                <h5 className="text-lg font-semibold">{data.name}</h5>
+                <button className="border rounded-full px-3 py-1 text-xs bg-[#F55D3E] text-white">
+                  {data.button}
+                </button>
+              </div>
+            </div>
+
+            {/* Rating */}
+            <div className="my-2 text-yellow-400">⭐⭐⭐⭐⭐</div>
+
+            {/* Review Text */}
+            <p className="text-sm mt-2">{data.review}</p>
+
+            {/* Date */}
+            <p className="mt-2 text-xs text-gray-400">{data.date}</p>
           </div>
         ))}
       </div>

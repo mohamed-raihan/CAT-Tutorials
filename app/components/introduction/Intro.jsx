@@ -32,55 +32,58 @@ function Intro() {
         </div>
       </div>
       <div className="col-span-1 flex flex-col ps-3 pe-1 md:p-0 justify-center items-center ">
-        <div className="bg- lg:w-[75%]  p-8 rounded-lg border border-[#1A2836] shadow-lg">
+        <div className="bg- lg:w-[75%]  p-8 rounded-lg border border-[#1A2836] hover:shadow shadow-[#F55D3E]">
           <div>
             <h3 className="text-[#FF6B3D] text-xl font-semibold mb-3">
-              NEED ASSISTANCE?
+              GET 7 DAYS LIVE SESSION FOR FREE!
             </h3>
             <p className="text-white mb-6">
-              Get guidance and clear your doubts
+              Clear your doubts with IIM faculties
             </p>
 
             {/* Form Fields */}
             <form onSubmit={handleSubmit}>
               <div className="space-y-4 mb-6">
-                <input
-                  type="text"
-                  name="fullname"
-                  placeholder="Enter your Full Name"
-                  value={formData.fullname}
-                  onChange={handleInputChange}
-                  className="w-full bg-[#131F2C] border border-[#1A2836] rounded-md p-3 text-white"
-                  required
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Mobile Number"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full bg-[#131F2C] border border-[#1A2836] rounded-md p-3 text-white"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full bg-[#131F2C] border border-[#1A2836] rounded-md p-3 text-white"
-                  required
-                />
-                <input
-                  type="text"
-                  name="college"
-                  placeholder="College Studied"
-                  value={formData.college}
-                  onChange={handleInputChange}
-                  className="w-full bg-[#131F2C] border border-[#1A2836] rounded-md p-3 text-white"
-                  required
-                />
-                <div className="relative">
+                <div className="grid gap-2 grid-cols-2">
+                  <div>
+                    <label htmlFor="">NAME</label>
+                    <input
+                      type="text"
+                      name="fullname"
+                      placeholder="Enter your Full Name"
+                      value={formData.fullname}
+                      onChange={handleInputChange}
+                      className="w-full col-span-1 bg-[#131F2C] border border-[#1A2836] rounded-md p-3 text-white"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="">NUMBER</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Mobile Number"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full col-span-1 bg-[#131F2C] border border-[#1A2836] rounded-md p-3 text-white"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="">EMAIL</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full bg-[#131F2C] border border-[#1A2836] rounded-md p-3 text-white"
+                    required
+                  />
+                </div>
+                
+                {/* <div className="relative">
                   <select
                     name="program"
                     value={formData.program}
@@ -112,7 +115,7 @@ function Intro() {
                       />
                     </svg>
                   </div>
-                </div>
+                </div> */}
               </div>
 
               {/* Submit Button */}

@@ -25,11 +25,11 @@ function Blogs() {
       ];
 
   return (
-    <div className="px-6  py-8">
+    <section className="px-6  py-8">
       <h1 className="text-3xl font-bold mb-6">Blogs</h1>
       <div className="grid max-w-6xl md:grid-cols-3 gap-6">
         {blogs.map((blog, index) => (
-          <div className="bg-[#0E1721] rounded-lg overflow-hidden hover:shadow shadow-[#F55D3E]">
+          <div key={index} className="bg-[#0E1721] rounded-lg overflow-hidden hover:shadow shadow-[#F55D3E]">
           <div className="relative w-full h-48">
             <Image
               src={blog.image}
@@ -52,7 +52,7 @@ function Blogs() {
           View All Blogs...
         </button>
       </div>
-    </div>
+    </section>
   )
 }
 

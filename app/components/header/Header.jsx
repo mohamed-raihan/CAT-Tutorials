@@ -4,8 +4,12 @@ import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import Link from "next/link";
 import { useRouter } from "next/navigation"; // Import Next.js router
+import { HiOutlineDotsVertical } from "react-icons/hi";
+import Modal from "../ModalForm";
+import { useModal } from "@/app/modalContext/ModalContext";
 
 export default function Header() {
+  const { openModal } = useModal();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State for the dropdown
   const [isVisible, setIsVisible] = useState(true);
@@ -39,11 +43,11 @@ export default function Header() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="container mx-auto ">
+      <div className="">
         <div className="flex items-center justify-between">
           {/* Logo */}
 
-          <div className="flex items-center">
+          <div className="flex gap-3 items-center">
             <Link href={"/"}>
               <Image
                 src="/cat-tutorial-logo.png"
@@ -53,103 +57,29 @@ export default function Header() {
                 className=""
               />
             </Link>
+            <div className="text-teal-700 font-normal text-1xl">
+              <HiOutlineDotsVertical className="m-0" />
+              <HiOutlineDotsVertical className="-my-0.5" />
+              <HiOutlineDotsVertical className="" />
+              <HiOutlineDotsVertical className="-my-0.5" />
+            </div>
+            <Image
+              src="/prep-logo.png"
+              alt="Prep Academy Logo"
+              width={100}
+              height={70}
+              className=""
+            />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8 items-center">
-            <a
-              href="#"
-              className="bg-[#F55D3E] text-white px-6 py-2 rounded-lg text-xl font-semibold"
-            >
-              Free Consultation
-            </a>
-          </nav>
-
-          {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-800"
+            onClick={openModal}
+            className="bg-[#F55D3E] text-white p-2 rounded-lg"
           >
-            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            Free Consultation
           </button>
         </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <nav className="md:hidden flex flex-col items-center bg-gray-100 py-4 px-6 space-y-4">
-            <Link
-              href="/"
-              className="text-gray-800 hover:text-[#F55D3E] text-sm font-semibold"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-gray-800 hover:text-[#F55D3E] text-sm font-semibold"
-            >
-              About Us
-            </Link>
-
-            {/* Mobile Dropdown for All Courses */}
-            <div className="relative">
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="text-gray-800 hover:text-[#F55D3E] text-sm font-semibold"
-              >
-                All Courses ▼
-              </button>
-
-              {/* Dropdown Menu */}
-              {isDropdownOpen && (
-                <div className="absolute left-0 mt-2 bg-black shadow-lg rounded-lg w-48">
-                  <a
-                    href="#"
-                    className="block text-white hover:text-[#F55D3E] px-4 py-2 text-sm"
-                  >
-                    School Courses
-                  </a>
-                  <a
-                    href="#"
-                    className="block text-white hover:text-[#F55D3E] px-4 py-2 text-sm"
-                  >
-                    College Courses
-                  </a>
-                  <a
-                    href="#"
-                    className="block text-white hover:text-[#F55D3E] px-4 py-2 text-sm"
-                  >
-                    Study Abroad
-                  </a>
-
-                  <a
-                    href="#"
-                    className="block text-white hover:text-[#F55D3E] px-4 py-2 text-sm"
-                  >
-                    Career Counseling
-                  </a>
-                </div>
-              )}
-            </div>
-            <Link
-              href="/blogs"
-              className="text-gray-800 hover:text-white text-sm font-semibold"
-            >
-              Blogs
-            </Link>
-            <a
-              href="/contact"
-              className="text-gray-800 hover:text-white text-sm font-semibold"
-            >
-              Contact
-            </a>
-            <a
-              href="https://test.prepacademy.in/"
-              className="bg-[#F55D3E] text-white px-6 py-2 rounded-lg text-sm font-semibold"
-            >
-              Take A Quick Test
-            </a>
-          </nav>
-        )}
       </div>
     </header>
   );

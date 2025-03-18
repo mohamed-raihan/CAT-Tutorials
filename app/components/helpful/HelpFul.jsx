@@ -5,22 +5,22 @@ const benefits = [
   {
     title: "Award Winning Faculties",
     description: "Join the best coaching in India for CAT that is run by IIM Alumni",
-    icon: "/awardWinning.svg", // Replace with actual image if needed
+    icon: "/awardWinning.png", // Replace with actual image if needed
   },
   {
     title: "Exponential Learning",
     description: "Boost the pace of your learning with efficient preparation process prepared by the experts.",
-    icon: "/exponentialLearning.svg",
+    icon: "/exponentialLearning.png",
   },
   {
     title: "One on One Guidance",
     description: "We believe & practice in providing one on one guidance for the best results.",
-    icon: "/oneOnOneguide.svg",
+    icon: "/oneOnOneguide.png",
   },
   {
     title: "Magical Tips & Tricks",
     description: "Learn alongside the experts who share tips & tricks with you that works like a magic.",
-    icon: "magicalTips.svg",
+    icon: "magicalTips.png",
   },
 ];
 
